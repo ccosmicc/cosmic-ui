@@ -1,11 +1,17 @@
-import React from "react";
 import "./App.css";
+import Header from "./components/Header";
+import { Fragment } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Lets build cosmic</h1>
-    </div>
+    <Fragment>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Header />} />
+        </Routes>
+      </Router>
+    </Fragment>
   );
 }
 
