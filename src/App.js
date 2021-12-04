@@ -1,17 +1,28 @@
-import "./App.css";
-import Header from "./components/Header";
-import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import styled from "styled-components";
+
+import "./App.css";
+import { Header, Sidebar } from "./components/index";
+
+const AppBodyWrapper = styled.div`
+  display: flex;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <Fragment>
+    <div className="app">
       <Router>
-        <Routes>
-          <Route exact path="/" element={<Header />} />
-        </Routes>
+        <Header />
+        {/* AppBodyWrapper includes the SideBar and Chat Section*/}
+        <AppBodyWrapper>
+          <Sidebar />
+          <Routes>
+            <Route exact path="/" /* element={<Chat/>} */ />
+          </Routes>
+        </AppBodyWrapper>
       </Router>
-    </Fragment>
+    </div>
   );
 }
 

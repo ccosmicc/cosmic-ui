@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Avatar } from "@mui/material";
 
 const Container = styled.div`
+  /* position is fixed since header will be shown always*/
   position: fixed;
   width: 100vw;
   display: flex;
@@ -32,7 +33,7 @@ const HeaderSearch = styled.div`
   flex: 0.4;
   display: flex;
   border: 1px solid lightgray;
-  background-color: #5dadec;
+  background-color: var(--cosmic-hover-color);
   border-radius: 10px;
   padding: 0px 30px;
 
