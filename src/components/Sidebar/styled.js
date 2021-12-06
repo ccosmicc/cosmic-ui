@@ -4,6 +4,7 @@ const Container = styled.div`
   background-color: var(--cosmic-primary-color);
   margin-top: 60px;
   color: #faf9fa;
+  padding: 10px;
 `;
 
 /* To seperate sections in the header */
@@ -17,7 +18,6 @@ const Hr = styled.hr`
 const SidebarHeader = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
   color: white;
 `;
 
@@ -58,7 +58,7 @@ const HeaderIcon = styled.div`
 `;
 
 const SidebarOptions = styled.div`
-  padding: 10px;
+  margin: 10px 0px;
 `;
 
 export {

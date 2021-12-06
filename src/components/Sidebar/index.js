@@ -1,11 +1,8 @@
-import {
-  FiberManualRecord,
-  CreateOutlined,
-  ExpandMoreOutlined,
-} from "@mui/icons-material";
+import { FiberManualRecord, CreateOutlined, Add } from "@mui/icons-material";
 import { Tooltip } from "@mui/material";
 import SidebarOption from "./SidebarOption";
 import Options from "./SidebarOption/optionsData";
+import SidebarAccordion from "./SidebarAccordion";
 
 import {
   Container,
@@ -43,6 +40,11 @@ const Sidebar = () => (
       ))}
     </SidebarOptions>
     <Hr />
+    <SidebarAccordion title="Direct messsages" type="direct-message" />
+    <Hr />
+    <SidebarAccordion title="Channels" type="channels" />
+    <Hr style={{ marginBottom: "10px" }} />
+    <SidebarOption Icon={Add} title="Add Channels" />
   </Container>
 );
 

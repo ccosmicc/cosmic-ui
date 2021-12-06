@@ -38,10 +38,6 @@ const Options = [
     Icon: FileCopyOutlined,
     title: "File browser",
   },
-  {
-    Icon: ExpandLessOutlined,
-    title: "Show Less",
-  },
 ];
 
 export default Options;
