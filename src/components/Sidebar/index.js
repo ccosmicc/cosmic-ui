@@ -1,4 +1,4 @@
-import { FiberManualRecord, CreateOutlined, Add } from "@mui/icons-material";
+import { FiberManualRecord, CreateOutlined } from "@mui/icons-material";
 import { Tooltip } from "@mui/material";
 import SidebarOption from "./SidebarOption";
 import Options from "./SidebarOption/optionsData";
@@ -39,13 +39,13 @@ const Sidebar = () => (
       <Hr />
       <SidebarOptions>
         {Options.map((item) => (
-          <SidebarOption Icon={item.Icon} title={item.title} />
+          <SidebarOption Icon={item.Icon} title={item.title} key={item.key} />
         ))}
       </SidebarOptions>
       <Hr />
       <SidebarAccordion title="Direct messsages" type="direct-message" />
       <Hr />
-      <SidebarAccordion title="Channels" type="channels" />
+      <SidebarAccordion title="Channels" type="channel" />
     </BodyWrapper>
   </Container>
 );
