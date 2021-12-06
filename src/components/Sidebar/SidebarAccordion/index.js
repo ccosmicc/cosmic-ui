@@ -1,6 +1,7 @@
 import AccordionDetails from "@mui/material/AccordionDetails";
 import { ChevronRightOutlined } from "@mui/icons-material";
 import AccordionItem from "./AccordionItem";
+import AccordionAction from "./AccordionAction";
 
 import {
   StyledAccordion,
@@ -24,6 +25,7 @@ const SidebarAccordion = ({ title, type, data }) => {
         <AccordionItem type={type} name="ipsum" />
         <AccordionItem type={type} name="lorem" />
       </AccordionDetails>
+      <AccordionAction type={type} />
     </StyledAccordion>
   );
 };

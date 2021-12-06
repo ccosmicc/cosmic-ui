@@ -13,8 +13,10 @@ import {
   HeaderInfoTextContainer,
   HeaderIcon,
   SidebarOptions,
+  BodyWrapper,
 } from "./styled";
 
+//TODO: Sidebar Scroll mechanism
 const Sidebar = () => (
   <Container>
     <Hr />
@@ -33,18 +35,18 @@ const Sidebar = () => (
         </HeaderIcon>
       </Tooltip>
     </SidebarHeader>
-    <Hr />
-    <SidebarOptions>
-      {Options.map((item) => (
-        <SidebarOption Icon={item.Icon} title={item.title} />
-      ))}
-    </SidebarOptions>
-    <Hr />
-    <SidebarAccordion title="Direct messsages" type="direct-message" />
-    <Hr />
-    <SidebarAccordion title="Channels" type="channels" />
-    <Hr style={{ marginBottom: "10px" }} />
-    <SidebarOption Icon={Add} title="Add Channels" />
+    <BodyWrapper>
+      <Hr />
+      <SidebarOptions>
+        {Options.map((item) => (
+          <SidebarOption Icon={item.Icon} title={item.title} />
+        ))}
+      </SidebarOptions>
+      <Hr />
+      <SidebarAccordion title="Direct messsages" type="direct-message" />
+      <Hr />
+      <SidebarAccordion title="Channels" type="channels" />
+    </BodyWrapper>
   </Container>
 );
 

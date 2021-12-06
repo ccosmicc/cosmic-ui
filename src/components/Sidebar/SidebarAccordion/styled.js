@@ -26,4 +26,25 @@ const AccordionTitle = styled.h1`
   margin-left: 10px;
 `;
 
-export { StyledAccordion, StyledAccordionSummary, AccordionTitle };
+const ItemWrapper = styled.div`
+  display: flex;
+  padding: 5px 0px;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--cosmic-hover-color);
+  }
+`;
+
+const SubTitle = styled.span`
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+`;
+export {
+  StyledAccordion,
+  StyledAccordionSummary,
+  AccordionTitle,
+  ItemWrapper,
+  SubTitle,
+};

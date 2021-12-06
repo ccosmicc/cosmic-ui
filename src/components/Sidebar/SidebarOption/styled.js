@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const SectionTitle = styled.span`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   margin-left: 10px;
 `;

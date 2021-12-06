@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+  position: fixed;
   background-color: var(--cosmic-primary-color);
   margin-top: 60px;
   color: #faf9fa;
-  padding: 10px;
+  height: 100vh;
 `;
 
 /* To seperate sections in the header */
@@ -19,6 +20,7 @@ const SidebarHeader = styled.div`
   display: flex;
   align-items: center;
   color: white;
+  padding: 10px;
 `;
 
 const HeaderInfo = styled.div`
@@ -57,8 +59,9 @@ const HeaderIcon = styled.div`
   cursor: pointer;
 `;
 
+const BodyWrapper = styled.div``;
 const SidebarOptions = styled.div`
-  margin: 10px 0px;
+  padding: 10px;
 `;
 
 export {
@@ -69,5 +72,6 @@ export {
   HeaderInfoTitle,
   HeaderInfoTextContainer,
   HeaderIcon,
+  BodyWrapper,
   SidebarOptions,
 };

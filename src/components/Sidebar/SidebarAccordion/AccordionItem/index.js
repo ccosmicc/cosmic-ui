@@ -1,11 +1,11 @@
-import { Container, SectionTitle } from "./styled";
+import { ItemWrapper, SubTitle } from "../styled";
 import { Avatar } from "@mui/material";
 
 /* Sidebar Accordion Item is reusable component */
 
 //TODO: Image prop should take image from the backend render it properly.
 const AccordionItem = ({ name, type, image }) => (
-  <Container>
+  <ItemWrapper>
     {type && type === "direct-message" ? (
       <Avatar
         alt="Avatar"
@@ -16,8 +16,8 @@ const AccordionItem = ({ name, type, image }) => (
     ) : (
       <span>#</span>
     )}
-    <SectionTitle>{name}</SectionTitle>
-  </Container>
+    <SubTitle>{name}</SubTitle>
+  </ItemWrapper>
 );
 
 export default AccordionItem;
