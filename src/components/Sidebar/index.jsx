@@ -45,7 +45,7 @@ const Sidebar = () => (
       <Hr />
       <SidebarAccordion title="Direct messsages" type="direct-message" />
       <Hr />
-      <SidebarAccordion title="Channels" type="channel" />
+      <SidebarAccordion title="Rooms" type="room" />
     </BodyWrapper>
   </Container>
 );

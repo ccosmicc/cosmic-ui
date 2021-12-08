@@ -9,18 +9,18 @@ const AccordionAction = ({ type }) => {
   const addMesssage = () => {
     console.log("message add");
   };
-  const addChannel = () => {
-    console.log("channel add");
+  const addRoom = () => {
+    console.log("room add");
   };
 
   return (
     <ItemWrapper
       style={{ padding: "5px 10px" }}
-      onClick={type === "direct-message" ? addMesssage : addChannel}
+      onClick={type === "direct-message" ? addMesssage : addRoom}
     >
       <Add />
       <SubTitle>
-        {type === "direct-message" ? "Add Direct Messages" : "Add Channels"}
+        {type === "direct-message" ? "Add Direct Messages" : "Add Rooms"}
       </SubTitle>
     </ItemWrapper>
   );

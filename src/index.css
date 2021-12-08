@@ -6,6 +6,7 @@
 body {
   --cosmic-primary-color: #1da1f2;
   --cosmic-hover-color: #5dadec;
+  --cosmic-text-hover-color: #f5f5f5;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

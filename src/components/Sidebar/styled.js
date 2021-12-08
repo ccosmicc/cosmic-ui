@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  position: fixed;
   background-color: var(--cosmic-primary-color);
   margin-top: 60px;
   color: #faf9fa;
   height: 100vh;
+  flex: 0.25;
 `;
 
 /* To seperate sections in the header */
@@ -28,6 +28,7 @@ const HeaderInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0px 10px;
+  margin-right: auto;
 `;
 
 const HeaderInfoTitle = styled.h3`
@@ -55,7 +56,7 @@ const HeaderIcon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin: 0px 10px 0px 50px;
+  margin-right: 10px;
   cursor: pointer;
 `;
 

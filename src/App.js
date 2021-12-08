@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import "./App.css";
-import { Header, Sidebar } from "./components/index";
+import { Header, Sidebar, Chat } from "./components/index";
 
 const AppBodyWrapper = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ function App() {
         <AppBodyWrapper>
           <Sidebar />
           <Routes>
-            <Route exact path="/" /* element={<Chat/>} */ />
+            <Route exact path="/" element={<Chat />} />
           </Routes>
         </AppBodyWrapper>
       </Router>
