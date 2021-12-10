@@ -4,7 +4,7 @@ const roomSlice = createSlice({
   name: "room",
   initialState: {
     name: "general",
-    ID: null,
+    id: null,
   },
   reducers: {},
 });

@@ -18,7 +18,11 @@ function App() {
         <AppBodyWrapper>
           <Sidebar />
           <Routes>
-            <Route exact path="/" element={<Chat />} />
+            <Route
+              exact
+              path="/"
+              element={<Chat chatType="direct-message" />}
+            />
           </Routes>
         </AppBodyWrapper>
       </Router>

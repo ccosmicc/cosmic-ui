@@ -1,68 +1,58 @@
 import { useSelector } from "react-redux";
-import styled from "styled-components";
 import { StarOutline, InfoOutlined } from "@mui/icons-material/";
-import { Tooltip } from "@mui/material";
-const Container = styled.div`
-  flex: 0.7;
-  flex-grow: 1;
-  overflow-y: scroll;
-  margin-top: 60px;
-`;
-const ChatHeader = styled.div`
-  display: flex;
-  height: 52px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid lightgrey;
-`;
+import { Tooltip, Avatar, Badge } from "@mui/material";
 
-const HeaderLeft = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 0px 10px;
-  cursor: pointer;
+import {
+  Container,
+  ChatHeader,
+  HeaderLeft,
+  HeaderTitle,
+  HeaderRight,
+  MessagesContainer,
+  StyledBadge,
+} from "./styled";
 
-  > .MuiSvgIcon-root {
-    margin-left: 10px;
-  }
-
-  &:hover {
-    background-color: var(--cosmic-text-hover-color);
-    border-radius: 10px;
-  }
-`;
-
-const RoomName = styled.h1`
-  font-size: 18px;
-  font-weight: 500;
-`;
-
-const HeaderRight = styled.div`
-  cursor: pointer;
-  padding-right: 10px;
-`;
-
-const Chat = () => {
-  const roomName = useSelector((state) => state.room.name);
+const Chat = ({ chatType }) => {
+  const headerTitle = useSelector((state) =>
+    chatType === "direct-message" ? state.message.user.name : state.room.name
+  );
 
   return (
     <Container>
       <ChatHeader>
-        <HeaderLeft>
-          <RoomName># {roomName}</RoomName>
-          <StarOutline />
+        <HeaderLeft chatType={chatType}>
+          {chatType && chatType === "direct-message" ? (
+            <>
+              <StyledBadge
+                overlap="circular"
+                anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+                variant="dot"
+              >
+                <Avatar
+                  alt={headerTitle}
+                  src="./cosmic-logo.png"
+                  sx={{ width: 24, height: 24 }}
+                />
+              </StyledBadge>
+              <HeaderTitle>{headerTitle}</HeaderTitle>
+            </>
+          ) : (
+            <>
+              <HeaderTitle>#{headerTitle}</HeaderTitle>
+              <StarOutline />
+            </>
+          )}
         </HeaderLeft>
         <HeaderRight>
-          <Tooltip
-            disableFocusListener
-            disableTouchListener
-            title="Get room details"
-          >
+          <Tooltip disableFocusListener disableTouchListener title="Details">
             <InfoOutlined />
           </Tooltip>
         </HeaderRight>
       </ChatHeader>
+      <MessagesContainer>
+        {/* <ChatBox/> */}
+        <h1>hey there</h1>
+      </MessagesContainer>
     </Container>
   );
 };

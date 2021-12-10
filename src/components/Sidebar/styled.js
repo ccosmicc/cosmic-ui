@@ -20,7 +20,7 @@ const SidebarHeader = styled.div`
   display: flex;
   align-items: center;
   color: white;
-  padding: 10px;
+  padding: 5px 10px;
 `;
 
 const HeaderInfo = styled.div`
@@ -43,7 +43,7 @@ const HeaderInfoTextContainer = styled.div`
 
   /* we can style MuiIcon using root class*/
   > .MuiSvgIcon-root {
-    color: green;
+    color: var(--cosmic-active-color);
     margin-right: "5px";
   }
 `;
