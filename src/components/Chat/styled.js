@@ -9,7 +9,7 @@ const Container = styled.div`
   overflow-y: scroll;
   margin-top: 60px;
 `;
-const ChatHeader = styled.div`
+const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,13 +54,12 @@ const HeaderRight = styled.div`
 `;
 
 const MessagesContainer = styled.div`
-  background-color: red;
   flex: 1;
 `;
 
 export {
   Container,
-  ChatHeader,
+  Header,
   HeaderLeft,
   HeaderTitle,
   HeaderRight,
