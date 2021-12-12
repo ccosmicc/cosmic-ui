@@ -53,7 +53,7 @@ const HeaderRight = styled.div`
   padding-right: 10px;
 `;
 
-const MessagesContainer = styled.div`
+const ChatMessages = styled.div`
   flex: 1;
 `;
 
@@ -63,6 +63,6 @@ export {
   HeaderLeft,
   HeaderTitle,
   HeaderRight,
-  MessagesContainer,
+  ChatMessages,
   StyledBadge,
 };

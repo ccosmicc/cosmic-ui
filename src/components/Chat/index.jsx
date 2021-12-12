@@ -1,14 +1,15 @@
 import { useSelector } from "react-redux";
 import { StarOutline, InfoOutlined } from "@mui/icons-material/";
 import { Tooltip, Avatar } from "@mui/material";
-import ChatBox from "./ChatBox/index";
+import ChatInputBox from "./ChatInputBox/";
+import ChatMessage from "./ChatMessage/";
 import {
   Container,
   Header,
   HeaderLeft,
   HeaderTitle,
   HeaderRight,
-  MessagesContainer,
+  ChatMessages,
   StyledBadge,
 } from "./styled";
 
@@ -53,9 +54,10 @@ const Chat = ({ chatType }) => {
   return (
     <Container>
       <ChatHeader />
-      <MessagesContainer>
-        <ChatBox />
-      </MessagesContainer>
+      <ChatMessages>
+        <ChatMessage />
+        <ChatInputBox chatType={chatType} />
+      </ChatMessages>
     </Container>
   );
 };

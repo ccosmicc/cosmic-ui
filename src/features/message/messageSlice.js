@@ -4,7 +4,7 @@ const messageSlice = createSlice({
   name: "message",
   initialState: {
     user: {
-      name: "john",
+      name: "Cosmic Official",
       image: null,
     },
     id: null,
