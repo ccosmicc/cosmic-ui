@@ -55,7 +55,44 @@ const Chat = ({ chatType }) => {
     <Container>
       <ChatHeader />
       <ChatMessages>
-        <ChatMessage />
+        {/*TODO:Information should come from backend
+         */}
+        <ChatMessage
+          user={{ name: "cosmic official" }}
+          userImg="./cosmic-logo.png"
+          timestamp="07/05/2021 20.27 PM"
+          message="hey there"
+        />
+        <ChatMessage
+          user={{ name: "cosmic official" }}
+          userImg="./cosmic-logo.png"
+          timestamp="07/05/2021 20.27 PM"
+          message="hey there"
+        />
+        <ChatMessage
+          user={{ name: "cosmic official" }}
+          userImg="./cosmic-logo.png"
+          timestamp="07/05/2021 20.27 PM"
+          message="hey there"
+        />
+        <ChatMessage
+          user={{ name: "cosmic official" }}
+          userImg="./cosmic-logo.png"
+          timestamp="07/05/2021 20.27 PM"
+          message="hey there"
+        />
+        <ChatMessage
+          user={{ name: "cosmic official" }}
+          userImg="./cosmic-logo.png"
+          timestamp="07/05/2021 20.27 PM"
+          message="hey there"
+        />
+        <ChatMessage
+          user={{ name: "cosmic official" }}
+          userImg="./cosmic-logo.png"
+          timestamp="07/05/2021 20.27 PM"
+          message="hey there"
+        />
         <ChatInputBox chatType={chatType} />
       </ChatMessages>
     </Container>

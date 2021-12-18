@@ -5,6 +5,7 @@ const userSlice = createSlice({
   initialState: {
     name: "undefined",
     email: "undefined",
+    image: null,
   },
   reducers: {
     update: {},

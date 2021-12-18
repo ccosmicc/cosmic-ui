@@ -8,6 +8,7 @@ const Container = styled.div`
   flex-grow: 1;
   overflow-y: scroll;
   margin-top: 60px;
+  position: relative;
 `;
 const Header = styled.div`
   display: flex;
