@@ -4,7 +4,8 @@ import { useState } from "react";
 import "./App.css";
 import { Header, Sidebar, Chat } from "./components/index";
 
-import Login from "./pages/Auth/Login/index";
+import Login from "./pages/Auth/Login";
+import SignUp from "./pages/Auth/SignUp";
 
 const AppBodyWrapper = styled.div`
   display: flex;
@@ -35,6 +36,7 @@ function App() {
         ) : (
           <Routes>
             <Route exact path="/" element={<Login />} />
+            <Route exact path="/signup" element={<SignUp />} />
           </Routes>
         )}
       </Router>

@@ -25,8 +25,9 @@ const Login = () => {
   } = useForm({
     resolver: yupResolver(SignupSchema),
   });
+
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    //TODO:handle submit
   };
 
   return (
