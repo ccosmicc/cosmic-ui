@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-
+import { useState } from "react";
 import "./App.css";
 import { Header, Sidebar, Chat } from "./components/index";
+
+import Login from "./pages/Auth/Login/index";
 
 const AppBodyWrapper = styled.div`
   display: flex;
@@ -10,21 +12,31 @@ const AppBodyWrapper = styled.div`
 `;
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="app">
       <Router>
-        <Header />
-        {/* AppBodyWrapper includes the SideBar and Chat Section*/}
-        <AppBodyWrapper>
-          <Sidebar />
+        {isLoggedIn ? (
+          <>
+            <Header />
+            {/* AppBodyWrapper includes the SideBar and Chat Section*/}
+            <AppBodyWrapper>
+              <Sidebar />
+              <Routes>
+                <Route
+                  exact
+                  path="/"
+                  element={<Chat chatType="direct-message" />}
+                />
+              </Routes>
+            </AppBodyWrapper>
+          </>
+        ) : (
           <Routes>
-            <Route
-              exact
-              path="/"
-              element={<Chat chatType="direct-message" />}
-            />
+            <Route exact path="/" element={<Login />} />
           </Routes>
-        </AppBodyWrapper>
+        )}
       </Router>
     </div>
   );
