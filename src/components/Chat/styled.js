@@ -6,10 +6,10 @@ const Container = styled.div`
   flex-direction: column;
   flex: 0.7;
   flex-grow: 1;
-  overflow-y: scroll;
   margin-top: 60px;
   position: relative;
 `;
+
 const Header = styled.div`
   display: flex;
   justify-content: space-between;

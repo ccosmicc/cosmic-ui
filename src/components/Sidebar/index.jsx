@@ -1,40 +1,15 @@
-import { FiberManualRecord, CreateOutlined } from "@mui/icons-material";
-import { Tooltip } from "@mui/material";
 import SidebarOption from "./SidebarOption";
 import Options from "./SidebarOption/optionsData";
 import SidebarAccordion from "./SidebarAccordion";
+import SidebarHeader from "./SidebarHeader";
 
-import {
-  Container,
-  Hr,
-  SidebarHeader,
-  HeaderInfo,
-  HeaderInfoTitle,
-  HeaderInfoTextContainer,
-  HeaderIcon,
-  SidebarOptions,
-  BodyWrapper,
-} from "./styled";
+import { Container, Hr, SidebarOptions, BodyWrapper } from "./styled";
 
 //TODO: Sidebar Scroll mechanism
 const Sidebar = () => (
   <Container>
     <Hr />
-    <SidebarHeader>
-      <HeaderInfo>
-        <HeaderInfoTitle>Hatice Demir</HeaderInfoTitle>
-        {/*TODO: Get the name when user logs in */}
-        <HeaderInfoTextContainer>
-          <FiberManualRecord />
-          active
-        </HeaderInfoTextContainer>
-      </HeaderInfo>
-      <Tooltip disableFocusListener disableTouchListener title="New Message">
-        <HeaderIcon>
-          <CreateOutlined color="primary" />
-        </HeaderIcon>
-      </Tooltip>
-    </SidebarHeader>
+    <SidebarHeader />
     <BodyWrapper>
       <Hr />
       <SidebarOptions>
