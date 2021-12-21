@@ -18,9 +18,9 @@ const Sidebar = () => (
         ))}
       </SidebarOptions>
       <Hr />
-      <SidebarAccordion title="Direct messsages" type="direct-message" />
+      <SidebarAccordion type="direct-message" />
       <Hr />
-      <SidebarAccordion title="Rooms" type="room" />
+      <SidebarAccordion type="room" />
     </BodyWrapper>
   </Container>
 );

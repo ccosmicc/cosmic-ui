@@ -13,15 +13,10 @@ import {
 } from "./styled";
 
 const Header = () => {
-  const [badgeInvisible, setBadgeInvisible] = useState(true);
-
   return (
     <Container>
       <HeaderLeft>
-        <HeaderAvatar
-        // TODO: onClick
-        // TODO: src: the users' profile picture
-        />
+        <HeaderAvatar />
         <Tooltip disableFocusListener disableTouchListener title="History">
           <AccessTime />
         </Tooltip>
@@ -34,7 +29,7 @@ const Header = () => {
       </HeaderSearch>
       <HeaderRight>
         <Tooltip disableFocusListener disableTouchListener title="Help">
-          <Badge variant="dot" color="secondary" invisible={badgeInvisible}>
+          <Badge variant="dot" color="secondary" invisible={false}>
             <HelpOutline />
           </Badge>
         </Tooltip>

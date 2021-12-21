@@ -3,8 +3,8 @@ import { Avatar } from "@mui/material";
 
 /* Sidebar Accordion Item is reusable component */
 
-//TODO: Image prop should take image from the backend render it properly.
-const AccordionItem = ({ name, type, image }) => (
+//TODO: Information will come from backend. Need for relevant props.
+const AccordionItem = ({ type }) => (
   <ItemWrapper>
     {type && type === "direct-message" ? (
       <Avatar
@@ -16,7 +16,7 @@ const AccordionItem = ({ name, type, image }) => (
     ) : (
       <span>#</span>
     )}
-    <SubTitle>{name}</SubTitle>
+    <SubTitle>lorem</SubTitle>
   </ItemWrapper>
 );
 

@@ -3,9 +3,8 @@ import { Add } from "@mui/icons-material/";
 
 /* Sidebar Accordion Action is for adding dm and channels  */
 
-//TODO: According to the type, change the onClick method the title.
 const AccordionAction = ({ type }) => {
-  //TODO: Message functionality(MUI dialog maybe) after installling elixr
+  //TODO: Message or channel add functionality(MUI dialog maybe).
   const addMesssage = () => {
     console.log("message add");
   };

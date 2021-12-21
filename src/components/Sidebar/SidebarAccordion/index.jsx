@@ -9,8 +9,7 @@ import {
   AccordionTitle,
 } from "./styled";
 
-//TODO: Option data will came from backend. (names)
-const SidebarAccordion = ({ title, type, data }) => {
+const SidebarAccordion = ({ type }) => {
   return (
     <StyledAccordion elevation={0} disableGutters>
       <StyledAccordionSummary
@@ -18,12 +17,14 @@ const SidebarAccordion = ({ title, type, data }) => {
           <ChevronRightOutlined style={{ color: "white" }} fontSize="small" />
         }
       >
-        <AccordionTitle>{title}</AccordionTitle>
+        <AccordionTitle>
+          {type === "direct-message" ? "Direct messages" : "Rooms"}
+        </AccordionTitle>
       </StyledAccordionSummary>
       <AccordionDetails>
-        <AccordionItem type={type} name="lorem" />
-        <AccordionItem type={type} name="ipsum" />
-        <AccordionItem type={type} name="lorem" />
+        <AccordionItem type={type} />
+        <AccordionItem type={type} />
+        <AccordionItem type={type} />
       </AccordionDetails>
       <AccordionAction type={type} />
     </StyledAccordion>
